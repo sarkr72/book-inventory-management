@@ -19,7 +19,8 @@ export const searchBooks = async (query) => {
           title: bookDetails.title,
           author: book.author_name && book.author_name[0],
           coverUrl: `https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`,
-            isbn: isbn,
+          isbn: isbn,
+          rating: 0,
         };
       } else {
         return null;
