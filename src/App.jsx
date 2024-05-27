@@ -22,8 +22,11 @@ const App = () => {
 
   const addBook = async (isbn) => {
     const book = await searchBooks(isbn);
-    if (book) {
+    // console.log("book is ", book[0].title);
+    if (book[0] && book[0].title) {
       setBooks([...books, { ...book }]);
+    }else{
+      window.alert("Book isn't found")
     }
   };
 
